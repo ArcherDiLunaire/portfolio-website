@@ -1,0 +1,40 @@
+	<script type="text/javascript">
+		$('font').hover(
+			    function() {
+			        var $this = $(this); // caching $(this)
+			        $this.data('initialtext', $this.text());
+			        $this.text($(this).data("toggletext"));
+			    },
+			    function() {
+			        var $this = $(this); // caching $(this)
+			        $this.text($this.data('initialtext'));
+			    }
+		);
+	</script>
+
+	<!-- OVERALL TEXT COLOR -->
+	<div style= "color:black; background-color:white"> 
+
+
+	<!-- SECTION 1 -->
+		<div class="section" id="About">
+					<!-- ABOUT  -->
+
+					<div id="contact">
+						<p>Aurel Richard<br>
+						<a href="mailto:aurelrichard00@gmail.com?Subject=Hi,%20I%20would%20like%20to%20offer%20you%20a%20job!" target="_top" style="cursor:pointer"> aurelrichard00@gmail.com </p> </a>
+					</div>	
+
+					<div class= "text">
+
+						<h2 style="color:dodgerblue"> Where I've Been</h2>
+						<h6> I was born in <font data-toggletext="&nbsp;Paris&nbsp;">France</font>, grew up in <font data-toggletext="Melbourne"> &nbsp;Australia&nbsp;</font>, studied in <font data-toggletext="London&nbsp;">England</font> where I graduated <font data-toggletext="with a BA in Graphic Design">from Central Saint Martins</font>. I'm now currently living in <font data-toggletext="a lovely atico">Barcelona</font>.</h6>
+
+						<br>
+						<br>
+
+						<h2 style="color:royalblue"> Where I'm Going</h2>
+						<h6> Currently teaching <font data-toggletext="creative technologies">at IED Barcelona</font>, I want to <font data-toggletext="&nbsp;keep on learning new skills&nbsp;">take on challenging projects</font>, be part of <font data-toggletext="&nbsp;innovative projects&nbsp;">fun and motivated teams</font> anywhere around the globe and keep making <font data-toggletext="&nbsp;fun playful stuff &nbsp;">cool techy things</font>.</h6>
+					</div>
+		</div>
+	</div>
