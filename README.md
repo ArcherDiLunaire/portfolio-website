@@ -1,2 +1,2 @@
-# portfolio-wesbite
+# portfolio-website
 my portfolio website
