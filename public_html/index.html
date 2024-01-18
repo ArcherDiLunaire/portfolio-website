@@ -1,130 +1,236 @@
 <!DOCTYPE html>
+
 <head>
 	<meta name="viewport" content=" width=device-width, user-scalable=no">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<meta property="og:title" content="Aurel Richard - Creative Technologist">
 	<meta property="og:url" content="http://archerdilunaire.com/">
-	<meta property="og:image" content="images/Drivr/drivr.png"/>
-	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="images/Drivr/drivr.png" />
+	<meta property="og:type" content="website" />
 	<link rel="shortcut icon" href="icons/cross_icon.ico" />
 
 	<title>Archer Dilunaire</title>
 
 	<meta name="Description" content="Aurel Richard / Barcelona based creative technologist">
 
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-
 	<script type="text/javascript">
 
-		$(document).ready(function() {
+		// $(document).ready(function () {
 
-			init();
+		// 	// init();
+
+		// 	appendNewContent('About.html');
+
+		// 	// CHANGING CONTENT ON MENU CLICK
+
+		// 	$('ul > li').click(function () {
+		// 		$('ul > li').removeClass('active');
+		// 		$(this).addClass('active');
+		// 		var name = $(this).children().html();
+		// 		var page = name + ".html";
+		// 		appendNewContent(page);
+
+		// 		// ADD BACKGROUND COLOR AND TITLE COLOR TO CONTENT
+
+		// 		var backColor = $(this).css("background-color");
+		// 		var titleColor = $(this).children().css("color");
+
+		// 		$(document).ajaxComplete(function () {
+		// 			$("#style").css("background-color", backColor);
+		// 			$("#title").css("color", titleColor);
+		// 			$("#Menu").addClass("hidden");
+		// 			$("#MenuButton").removeClass("active");
+		// 		});
+		// 	});
+
+		// 	// // INITIALISING FULLPAGE.JS
+
+		// 	// 	function init(){
+		// 	// 	   	$('#fullpage').fullpage({
+		// 	// 			verticalCentered:false,
+		// 	// 			scrollOverflow: true,
+
+		// 	// 		});
+		// 	// 	};
+
+		// 	// GETTING THE CONTENT INTO THE GALLERY
+
+		// 	function appendNewContent(page) {
+		// 		$.ajax({
+		// 			url: page, // here I pass the param to the ajax
+		// 			cache: false,
+		// 			type: 'GET',
+		// 			success: function (html) {
+		// 				$('#page').empty();
+		// 				// $.fn.fullpage.destroy('all');
+		// 				// here handle all the appending the html
+		// 				$('#page').append($(html));
+		// 				// initialise fp.js
+		// 				// init();
+		// 			}
+		// 		});
+		// 	}
+
+		// });
+
+		let menu;
+		let menuButton;
+		let menuItems;
+		let backColor;
+		let titleColor;
+		let style;
+		let pageContent;
+
+
+		document.addEventListener('DOMContentLoaded', function () {
+
+			menu = document.getElementById("menu");
+			menuButton = document.getElementById("menu-button");
+			pageContent = document.getElementById("page-content");
 
 			appendNewContent('About.html');
 
-			// CHANGING CONTENT ON MENU CLICK
+			var fonts = document.querySelectorAll('font');
+			
+			fonts.forEach(function (font) {
+				font.addEventListener('mouseover', function () {
+					console.log("hello");
+					this.dataset.initialtext = this.textContent;
+					this.textContent = this.dataset.toggletext;
+				});
 
-			$('ul > li').click(function() { 
-				$('ul > li').removeClass('active');
-				$(this).addClass('active');
-				var name = $(this).children().html();
-				var page = name+".html";
-				appendNewContent(page);
-
-				// ADD BACKGROUND COLOR AND TITLE COLOR TO CONTENT
-
-				var backColor = $(this).css("background-color");
-				var titleColor = $(this).children().css("color");
-
-				$(document).ajaxComplete(function(){
-					$("#style").css("background-color",backColor);
-					$("#title").css("color",titleColor);
-					$("#Menu").addClass("hidden");
-					$("#MenuButton").removeClass("active");
+				font.addEventListener('mouseleave', function () {
+					this.textContent = this.dataset.initialtext;
 				});
 			});
 
-		// INITIALISING FULLPAGE.JS
+			// CHANGING CONTENT ON MENU CLICK
+			menuItems = document.querySelectorAll('ul > li');
+			menuItems.forEach(function (item) {
+				item.addEventListener('click', function () {
+					menuItems.forEach(function (item) {
+						item.classList.remove('active');
+					});
+					this.classList.add('active');
 
-			function init(){
-			   	$('#fullpage').fullpage({
-					verticalCentered:false,
-					scrollOverflow: true,
+					var name = this.children[0].innerHTML;
+					var page = name + ".html";
+					appendNewContent(page);
 
+					// ADD BACKGROUND COLOR AND TITLE COLOR TO CONTENT
+					backColor = window.getComputedStyle(this).getPropertyValue("background-color");
+					titleColor = window.getComputedStyle(this.children[0]).getPropertyValue("color");
+
+					document.addEventListener('ajaxComplete', function () {
+						document.getElementById("style").style.backgroundColor = backColor;
+						document.getElementById("title").style.color = titleColor;
+					});
 				});
-			};
+			});
+		});
 
 		// GETTING THE CONTENT INTO THE GALLERY
-		 
-			function appendNewContent(page){
-				$.ajax({
-					url: page, // here I pass the param to the ajax
-					cache: false,
-					type: 'GET',
-					success: function(html){
-						$('#fullpage').empty();
-						$.fn.fullpage.destroy('all');
-						// here handle all the appending the html
-						$('#fullpage').append($(html));
-						// initialise fp.js
-						init();
+		function appendNewContent(page) {
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', page, true);
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState == 4 && xhr.status == 200) {
+						pageContent.innerHTML = "";
+						pageContent.insertAdjacentHTML("afterbegin", xhr.responseText);
+
+						setStyle(pageContent);
+						hideMenu();
 					}
-				});
-			}		
+				};
+				xhr.send();
+			}
 
-		});	
+		function setStyle(p) {
+			let s = p.querySelector("#style");
+			if (s) {
+				s.style.backgroundColor = backColor;
+				s.querySelector("#title").style.color = titleColor;
+			}
+		}
 
-		function show_menu(){
-			$("#Menu").toggleClass("hidden");
-			$("#MenuButton").toggleClass("active");
-		};		
+		function showMenu() {
+			if (menuButton.classList.contains("active")) return;
+			menu.classList.remove("hidden");
+			menuButton.classList.add("active");
+		}
+
+		function hideMenu() {
+			if (menu.classList.contains("hidden")) return;
+			menu.classList.add("hidden");
+			menuButton.classList.remove("active");
+		}
 	</script>
 </head>
 
 <body>
+	<!-- PROJECT -->
 
-<!-- MENU -->
+	<section>
+		<div id="page-content">
+			<!-- page inserts here -->
+		</div>
+	</section>
 
-<nav id="MenuButton" onclick="show_menu()"> </nav>
+	<!-- MENU -->
 
-<section id="Menu" class="hidden">
+	<button id="menu-button" onclick="`${this.classList.contains('active') ? hideMenu() : showMenu()}`"> Projects
+	</button>
+
+	<section id="menu" class="hidden">
 		<ul class="grid-container">
 
-		<li class="grid-item" style="background-color:black; background-image:url(images/Metronomy/metronomy_small.png)"> <h4 style="color:gold">Metronomy Pinball</h4></li>
+			<li class="grid-item"
+				style="background-color:black; background-image:url(images/Metronomy/metronomy_small.png)">
+				<h4 style="color:gold">Metronomy Pinball</h4>
+			</li>
 
-		<li class="grid-item" style="background-color:#0d0b0b; background-image:url(images/Je_suis_qui_je_suis/jesuis4_small.png)"> <h4 style="color:thistle">Je suis qui je suis</h4></li>
+			<li class="grid-item"
+				style="background-color:#0d0b0b; background-image:url(images/Je_suis_qui_je_suis/jesuis4_small.png)">
+				<h4 style="color:thistle">Je suis qui je suis</h4>
+			</li>
 
-		<li class="grid-item" style="background-color: #f4fcff; background-image:url(images/Lacoste/xmas_small.png)"> <h4 style="color:green">Lacoste Xmas</h4></li>
+			<li class="grid-item"
+				style="background-color: #f4fcff; background-image:url(images/Lacoste/xmas_small.png)">
+				<h4 style="color:green">Lacoste Xmas</h4>
+			</li>
 
-		<li class="grid-item" style="background-color:#eef2fc; background-image:url(images/Default/default_small.png)"> <h4 style="color:mediumorchid">Default</h4></li>
+			<li class="grid-item"
+				style="background-color:#eef2fc; background-image:url(images/Default/default_small.png)">
+				<h4 style="color:mediumorchid">Default</h4>
+			</li>
 
-		<li class="grid-item" style="background-color:#fafafa; background-image:url(images/Superbarrio/superbarrio_small.png)"> <h4 style="color:lightcoral">SuperBarrio</h4></li>
+			<li class="grid-item"
+				style="background-color:#fafafa; background-image:url(images/Superbarrio/superbarrio_small.png)">
+				<h4 style="color:lightcoral">SuperBarrio</h4>
+			</li>
 
-		<li class="grid-item" style="background-color: #f6f6f6; background-image:url(images/Drivr/drivr_small.png)"> <h4 style="color:deepskyblue">DRI.VR</h4></li>
+			<li class="grid-item" style="background-color: #f6f6f6; background-image:url(images/Drivr/drivr_small.png)">
+				<h4 style="color:deepskyblue">DRI.VR</h4>
+			</li>
 
-		<li class="grid-item" style="background-color:#ffffff; background-image:url(images/Find_a_penny/find_a_penny_small.png)"> <h4 style="color:darkcyan">Find A Penny</h4></li>
+			<li class="grid-item"
+				style="background-color:#ffffff; background-image:url(images/Find_a_penny/find_a_penny_small.png)">
+				<h4 style="color:darkcyan">Find A Penny</h4>
+			</li>
 
-		<li class="grid-item" style="background-color: #000000; background-image:url(images/Meeting_Intruders/meet_small.jpg)"> <h4 style="color:#d20f58">Meeting Intruders</h4></li>
+			<li class="grid-item"
+				style="background-color: #000000; background-image:url(images/Meeting_Intruders/meet_small.jpg)">
+				<h4 style="color:#d20f58">Meeting Intruders</h4>
+			</li>
 
-		<li class="grid-item" style="background-image:url(images/giphy.gif)"> <h4 style="opacity: 1; font-size: 14pt;">About</h4></li>
+			<li class="grid-item" style="background-image:url(images/giphy.gif)">
+				<h4 style="opacity: 1; font-size: 14pt;">About</h4>
+			</li>
 
-	</ul>
-</section>
-
-
-<!-- PROJECT -->
-
-<section>	
-	<div id="fullpage">
-		<!-- Insert page here -->
-	</div>
-</section>
-
+		</ul>
+	</section>
 </body>
+
 </html>

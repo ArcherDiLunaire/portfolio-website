@@ -1,47 +1,51 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500');
 
 
-body{
-	
+body {
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 }
 
+button {
+	all: unset;
+}
+
+button:focus {
+	outline: revert;
+}
+
 /******* MENU ********/
 
-#Menu{
+#menu {
 	position: fixed;
-	z-index: 10;
+	top: 0;
+	left: 0;
+	z-index: 1;
 	height: 100vh;
 	animation: backgroundFade .8s ease-in-out forwards;
 	overflow: scroll;
 }
 
-#Menu.hidden{
+#menu.hidden {
 	display: none;
 }
 
-#MenuButton:after{
+#menu-button {
+	font-family: 'Montserrat', sans-serif;
 	font-size: 12pt;
-	content:"Projects";
 	text-decoration: underline;
 	cursor: pointer;
 	position: fixed;
-	top: 0;
-	left: 0;
-	color: white;
-	padding: 40px;
-	z-index: 11;
-}
-
-#MenuButton.active:after{
-	content: "Close";
+	top: 40px;
+	left: 40px;
+	color: black;
+	z-index: 2;
 }
 
 
-.grid-container{
-	width:100vw;
-	height:100%;
+.grid-container {
+	width: 100vw;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	position: relative;
@@ -49,102 +53,103 @@ body{
 
 @keyframes backgroundFade {
 
-	  0% {
-	    background-color: transparent;
-	  }
-
-	  100% {
-	    background-color: black;
-	  }
+	0% {
+		background-color: transparent;
 	}
 
-.grid-item{
+	100% {
+		background-color: black;
+	}
+}
+
+.grid-item {
 	float: left;
-    display: table;
+	display: table;
 	width: calc(100%/3);
 	height: calc(100%/3);
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    background-size: cover;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	background-size: cover;
 	background-position: center;
 	position: relative;
 	opacity: 0;
 }
 
-.grid-item:hover h4{
+.grid-item:hover h4 {
 	transition: .3s ease-in-out;
 	opacity: 1;
 	font-size: 14pt;
 }
 
-.grid-item h4{
+.grid-item h4 {
 	position: absolute;
 	font-weight: 400;
-    font-size: 15pt;
-    margin: 25px;
-    color: white;
-    text-align: right;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    transition: .3s ease-in-out;
+	font-size: 15pt;
+	margin: 25px;
+	color: white;
+	text-align: right;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	transition: .3s ease-in-out;
 }
 
 
- /*CASCADE MENU*/
+/*CASCADE MENU*/
 
-	.grid-container li:nth-of-type(1) {
-		 animation-delay:0ms;
-	}
-	.grid-container li:nth-of-type(2) {
-	  animation-delay:75ms;
-	}
-	.grid-container li:nth-of-type(3) {
-	  animation-delay:150ms;
-	}
-	.grid-container li:nth-of-type(4) {
-	  animation-delay:225ms;
-	}
-	.grid-container li:nth-of-type(5) {
-	  animation-delay:300ms;
-	}
-	.grid-container li:nth-of-type(6) {
-	  animation-delay:375ms;
-	}
-	.grid-container li:nth-of-type(7) {
-	  animation-delay:450ms;
-	}
-	.grid-container li:nth-of-type(8) {
-	  animation-delay:525ms;
-	}
-	.grid-container li:nth-of-type(9) {
-	  animation-delay:600ms;
-	}
-	
+.grid-container li:nth-of-type(1) {
+	animation-delay: 0ms;
+}
 
-	@keyframes cascadeInSimple {
+.grid-container li:nth-of-type(2) {
+	animation-delay: 75ms;
+}
 
-	  10% {
-	    opacity:0;
-	    transform:scale(0.9);
-	  }
+.grid-container li:nth-of-type(3) {
+	animation-delay: 150ms;
+}
 
-	  100% {
-	    opacity:1;
-	    transform:scale(1);
-	  }
-	}
+.grid-container li:nth-of-type(4) {
+	animation-delay: 225ms;
+}
 
-	/*
-		Apply the animation to every list item
-	*/
-	.grid-container li {
-	  animation: cascadeInSimple .3s ease-in-out forwards;
-	}
+.grid-container li:nth-of-type(5) {
+	animation-delay: 300ms;
+}
+
+.grid-container li:nth-of-type(6) {
+	animation-delay: 375ms;
+}
+
+.grid-container li:nth-of-type(7) {
+	animation-delay: 450ms;
+}
+
+.grid-container li:nth-of-type(8) {
+	animation-delay: 525ms;
+}
+
+.grid-container li:nth-of-type(9) {
+	animation-delay: 600ms;
+}
 
 
-#MenuButton:after{
+@keyframes cascadeInSimple {
+
+	10% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+#menu-button{
 	animation: glow 3s ease-in-out forwards infinite;
 }
 
@@ -164,12 +169,16 @@ body{
 	}
 }
 
-
-
+/*
+		Apply the animation to every list item
+	*/
+.grid-container li {
+	animation: cascadeInSimple .3s ease-in-out forwards;
+}
 
 /******* SECTIONS ********/
 
-#fullpage .section img{
+#page-content .section img {
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -177,157 +186,160 @@ body{
 	object-position: center center;
 }
 
-#fullpage .section .text{
+#page-content .section .text {
 	width: 50vw;
 	max-width: 650px;
 	position: absolute;
 	margin-right: 70px;
 	margin-bottom: 60px;
 	bottom: 0;
-	right: 0;	
+	right: 0;
 	text-align: right;
 }
 
-#fullpage .section #arrow{
+#page-content .section #arrow {
 	position: absolute;
-    height: 77px;
-    width:auto;
-    z-index: 1;
-    bottom: 58px;
-    right: 65px
+	height: 77px;
+	width: auto;
+	z-index: 1;
+	bottom: 58px;
+	right: 65px
 }
 
-#fullpage .section .center-content{
+#page-content .section .center-content {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 	height: 100%;
 }
-#fullpage .section .section-text{
+
+#page-content .section .section-text {
 	padding: 10vw;
 	max-width: 800px;
 }
 
-#fullpage #auto-height{
+#page-content #auto-height {
 	height: auto !important;
 }
 
-#fullpage #auto-height .text{
+#page-content #auto-height .text {
 	position: relative;
 	margin-bottom: 0;
-	margin-left: auto; 
+	margin-left: auto;
 }
 
-#fullpage #auto-height #box{
-	padding: 70px 0 70px 0; 
+#page-content #auto-height #box {
+	padding: 70px 0 70px 0;
 }
 
-#fullpage iframe{
-    position: relative;
-    margin: 0 auto 0 auto;
-    top: 11%;
-    right: 0;
-    left: 0;
-    display: block;
-    width:80%; 
-    height:80%;
+#page-content iframe {
+	position: relative;
+	margin: 0 auto 0 auto;
+	top: 11%;
+	right: 0;
+	left: 0;
+	display: block;
+	width: 80%;
+	height: 80%;
 }
 
 
-h1{
+h1 {
 	font-weight: 400;
-    font-size: 30pt;
-    line-height: 34pt;
-    margin: 0;
-    padding-top: 10px;
+	font-size: 30pt;
+	line-height: 34pt;
+	margin: 0;
+	padding-top: 10px;
 }
 
-h3{
+h3 {
 	font-size: 16pt;
 	font-weight: 300;
 	line-height: 24pt;
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
-h2,p{
+h2,
+p {
 	font-weight: 200;
-    font-size: 12pt;
-    margin: 0;
-    letter-spacing: 1px;
+	font-size: 12pt;
+	margin: 0;
+	letter-spacing: 1px;
 }
 
-p{
+p {
 	font-weight: 100;
 	margin-top: 20px;
 }
 
-a{
+a {
 	color: inherit;
 	text-decoration: underline;
 }
 
 /*******ABOUT********/
 
-#About #contact{
+#about #contact {
 	text-align: right;
-    padding-top: 40px;
-    margin-right: 70px;
-    float: right;
-    width: 100%;
+	padding-top: 40px;
+	margin-right: 70px;
+	float: right;
+	width: 100%;
 }
 
-#contact a:hover{
-	color: mediumspringgreen;
+#contact a:hover {
+	color: dodgerblue;
 }
 
-#About .text{
+#about .text {
 	position: relative !important;
 	float: right;
 	margin-top: 5vh;
 	width: auto !important;
 }
 
-h6{
+h6 {
 	font-weight: 400;
-    font-size: 20pt;
-    line-height: 32pt;
-    margin: 0;
-    padding-top: 10px;
-    cursor: pointer;
+	font-size: 20pt;
+	line-height: 32pt;
+	margin: 0;
+	padding-top: 10px;
+	cursor: pointer;
 }
 
-font
-{
+h6 span::after {
+	content: attr(data-initialText);
 	color: grey;
-	background-color: rgba(210,210,210,1);
-	padding: 2px; 
+	background-color: rgba(210, 210, 210, 1);
+	padding: 2px;
 }
 
-font:hover
-{
-	color: rgba(220,220,220,1);
-	background-color: rgba(30,30,30,1);
+/* h6 span:hover {
+	color: rgba(220, 220, 220, 1);
+	background-color: rgba(30, 30, 30, 1);
+} */
+
+h6 span:hover::after {
+	content: attr(data-toggletext);
+	color: rgba(220, 220, 220, 1);
+	background-color: rgba(30, 30, 30, 1);
 }
-
-
 
 /*******FOOTER********/
 
-h10
-{
+h10 {
 	padding-top: 20px;
 	margin-bottom: 20px;
-	text-align:center;
-	font-family:Avenir_Light, 'Helvetica Neue', sans-serif;
-	font-size:10pt;
+	text-align: center;
+	font-family: Avenir_Light, 'Helvetica Neue', sans-serif;
+	font-size: 10pt;
 	opacity: 0.2;
-    font-weight: 300;
-    letter-spacing: .3px;
+	font-weight: 300;
+	letter-spacing: .3px;
 }
 
-footer
-{
+footer {
 	position: absolute;
 	bottom: 0;
 	padding-bottom: 25px;
@@ -339,45 +351,46 @@ footer
 /*MEDIA QUERIES*/
 @media screen and (max-width: 800px) {
 
-	#About #contact{
+	#about #contact {
 		margin-right: 40px;
 	}
 
-	#About .text{
+	#about .text {
 		margin-right: 40px;
 		width: 70vw !important;
 	}
 
-	#fullpage .section .text{
+	#page-content .section .text {
 		margin-right: 40px;
 	}
 
-	h1{
+	h1 {
 		font-size: 22pt;
-	    line-height: 26pt;
-	    font-weight: 500;
+		line-height: 26pt;
+		font-weight: 500;
 	}
 
-	h2,p{
+	h2,
+	p {
 		font-size: 10pt;
 		font-weight: 300;
 	}
 
-	h6{
+	h6 {
 		font-size: 16pt;
-    	line-height: 28pt;
-    	font-weight: 500;
-	}
-
-	.grid-item h4{
+		line-height: 28pt;
 		font-weight: 500;
 	}
 
-	h10{
+	.grid-item h4 {
+		font-weight: 500;
+	}
+
+	h10 {
 		font-size: 7pt;
 	}
 
-	#MenuButton:after{
+	#menu-button:after {
 		font-size: 10pt;
 		font-weight: 500;
 	}
@@ -387,15 +400,15 @@ footer
 
 @media screen and (max-width: 600px) and (orientation:portrait) {
 
-	.grid-item{
+	.grid-item {
 		width: 100%;
 	}
 
-	.grid-item h4{
+	.grid-item h4 {
 		opacity: 1;
 	}
 
-	#fullpage .section .text{
+	#page-content .section .text {
 		width: 70vw;
 	}
 
