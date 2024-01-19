@@ -8,7 +8,7 @@
 	<meta property="og:url" content="http://archerdilunaire.com/">
 	<meta property="og:image" content="images/Drivr/drivr.png" />
 	<meta property="og:type" content="website" />
-	<link rel="shortcut icon" href="icons/cross_icon.ico" />
+	<link rel="shortcut icon" href="icons/Smiley.ico" />
 
 	<title>Archer Dilunaire</title>
 
@@ -93,7 +93,7 @@
 			appendNewContent('About.html');
 
 			var fonts = document.querySelectorAll('font');
-			
+
 			fonts.forEach(function (font) {
 				font.addEventListener('mouseover', function () {
 					console.log("hello");
@@ -133,19 +133,19 @@
 
 		// GETTING THE CONTENT INTO THE GALLERY
 		function appendNewContent(page) {
-				var xhr = new XMLHttpRequest();
-				xhr.open('GET', page, true);
-				xhr.onreadystatechange = function () {
-					if (xhr.readyState == 4 && xhr.status == 200) {
-						pageContent.innerHTML = "";
-						pageContent.insertAdjacentHTML("afterbegin", xhr.responseText);
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', page, true);
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					pageContent.innerHTML = "";
+					pageContent.insertAdjacentHTML("afterbegin", xhr.responseText);
 
-						setStyle(pageContent);
-						hideMenu();
-					}
-				};
-				xhr.send();
-			}
+					setStyle(pageContent);
+					hideMenu();
+				}
+			};
+			xhr.send();
+		}
 
 		function setStyle(p) {
 			let s = p.querySelector("#style");
@@ -157,12 +157,14 @@
 
 		function showMenu() {
 			if (menuButton.classList.contains("active")) return;
+			menuButton.innerHTML = "Close";
 			menu.classList.remove("hidden");
 			menuButton.classList.add("active");
 		}
 
 		function hideMenu() {
 			if (menu.classList.contains("hidden")) return;
+			menuButton.innerHTML = "Projects";
 			menu.classList.add("hidden");
 			menuButton.classList.remove("active");
 		}
@@ -170,8 +172,17 @@
 </head>
 
 <body>
-	<!-- PROJECT -->
+	<!-- HEADER -->
+	<nav>
+		<button id="menu-button" onclick="`${this.classList.contains('active') ? hideMenu() : showMenu()}`"> Projects
+		</button>
+		<div class="socials">
+			<a target="_blank" href="mailto:aurelrichard00@gmail.com?Subject=Hi,%20I%20would%20like%20to%20offer%20you%20a%20job!"><img width="100%" src="icons/Mail.svg"></a>
+			<a target="_blank" href="https://www.linkedin.com/in/aurel-richard-3200292a6/"><img width="100%" src="icons/Linkedin.svg"></a>
+		</div>
+	</nav>
 
+	<!-- PROJECT -->
 	<section>
 		<div id="page-content">
 			<!-- page inserts here -->
@@ -179,10 +190,6 @@
 	</section>
 
 	<!-- MENU -->
-
-	<button id="menu-button" onclick="`${this.classList.contains('active') ? hideMenu() : showMenu()}`"> Projects
-	</button>
-
 	<section id="menu" class="hidden">
 		<ul class="grid-container">
 
@@ -225,7 +232,17 @@
 				<h4 style="color:#d20f58">Meeting Intruders</h4>
 			</li>
 
-			<li class="grid-item" style="background-image:url(images/giphy.gif)">
+			<li class="grid-item"
+				style="background-color:#ffffff; background-image:url(images/Find_a_penny/find_a_penny_small.png)">
+				<h4 style="color:darkcyan">Find A Penny</h4>
+			</li>
+
+			<li class="grid-item"
+				style="background-color: #000000; background-image:url(images/Meeting_Intruders/meet_small.jpg)">
+				<h4 style="color:#d20f58">Meeting Intruders</h4>
+			</li>
+
+			<li class="grid-item" id="about-item" style="background-image:url(images/giphy.gif)">
 				<h4 style="opacity: 1; font-size: 14pt;">About</h4>
 			</li>
 
