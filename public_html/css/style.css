@@ -58,7 +58,7 @@ nav {
 
 #menu-button {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 12pt;
+	font-size: 10pt;
 	border-radius: 20px;
 	border: solid 1px white;
 	padding: 2px 8px;
@@ -96,6 +96,8 @@ nav {
 
 .grid-item {
 	display: flex;
+	align-items: center;
+    justify-content: center;
 	flex-grow: 1;
 	width: calc(100%/3);
 	height: calc(100%/3.3);
@@ -116,14 +118,9 @@ nav {
 }
 
 .grid-item h4 {
-	position: absolute;
-	font-weight: 400;
-	font-size: 12pt;
-	margin: 25px;
+	font-weight: 500;
+	font-size: 10pt;
 	color: white;
-	text-align: right;
-	bottom: 0;
-	right: 0;
 	opacity: 0;
 	transition: .3s ease-in-out;
 	border-radius: 20px;
@@ -211,6 +208,10 @@ nav {
 
 /******* SECTIONS ********/
 
+#page-content .section{
+	position: relative;
+}
+
 #page-content .section img {
 	width: 100%;
 	height: 100%;
@@ -243,10 +244,6 @@ nav {
 	max-width: 800px;
 }
 
-#page-content #auto-height {
-	height: auto !important;
-}
-
 #page-content #auto-height .text {
 	position: relative;
 	margin-bottom: 0;
@@ -254,7 +251,7 @@ nav {
 }
 
 #page-content #auto-height #box {
-	padding: 70px 0 70px 0;
+	padding: 100px 0;
 }
 
 #page-content iframe {
@@ -278,7 +275,7 @@ h1 {
 }
 
 h3 {
-	font-size: 16pt;
+	font-size: 14pt;
 	font-weight: 300;
 	line-height: 24pt;
 	opacity: 0.7;
@@ -286,10 +283,16 @@ h3 {
 
 h2,
 p {
+	display: inline-block;
 	font-weight: 200;
-	font-size: 12pt;
+	font-size: 10pt;
 	margin: 0;
-	letter-spacing: 1px;
+}
+
+h2#title{
+    padding: 2px 8px;
+    border-radius: 20px;
+	font-weight: 500;
 }
 
 p {
@@ -354,7 +357,7 @@ h10 {
 	text-align: center;
 	font-family: Avenir_Light, 'Helvetica Neue', sans-serif;
 	font-size: 10pt;
-	opacity: 0.2;
+	opacity: 0.5;
 	font-weight: 300;
 	letter-spacing: .3px;
 }
@@ -362,7 +365,7 @@ h10 {
 footer {
 	position: absolute;
 	bottom: 0;
-	padding-bottom: 25px;
+	padding-bottom: 20px;
 	text-align: center;
 	width: 100%;
 }
@@ -404,10 +407,6 @@ footer {
 	h6 {
 		font-size: 16pt;
 		line-height: 28pt;
-		font-weight: 500;
-	}
-
-	.grid-item h4 {
 		font-weight: 500;
 	}
 

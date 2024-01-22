@@ -151,7 +151,8 @@
 			let s = p.querySelector("#style");
 			if (s) {
 				s.style.backgroundColor = backColor;
-				s.querySelector("#title").style.color = titleColor;
+				s.querySelector("#title").style.color = backColor;
+				s.querySelector("#title").style.backgroundColor = titleColor;
 			}
 		}
 
@@ -243,7 +244,7 @@
 			</li>
 
 			<li class="grid-item" id="about-item" style="background-image:url(images/giphy.gif)">
-				<h4 style="opacity: 1; font-size: 14pt;">About</h4>
+				<h4 style="opacity: 1;">About</h4>
 			</li>
 
 		</ul>
