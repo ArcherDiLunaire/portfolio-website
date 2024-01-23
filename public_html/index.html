@@ -17,64 +17,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript">
 
-		// $(document).ready(function () {
-
-		// 	// init();
-
-		// 	appendNewContent('About.html');
-
-		// 	// CHANGING CONTENT ON MENU CLICK
-
-		// 	$('ul > li').click(function () {
-		// 		$('ul > li').removeClass('active');
-		// 		$(this).addClass('active');
-		// 		var name = $(this).children().html();
-		// 		var page = name + ".html";
-		// 		appendNewContent(page);
-
-		// 		// ADD BACKGROUND COLOR AND TITLE COLOR TO CONTENT
-
-		// 		var backColor = $(this).css("background-color");
-		// 		var titleColor = $(this).children().css("color");
-
-		// 		$(document).ajaxComplete(function () {
-		// 			$("#style").css("background-color", backColor);
-		// 			$("#title").css("color", titleColor);
-		// 			$("#Menu").addClass("hidden");
-		// 			$("#MenuButton").removeClass("active");
-		// 		});
-		// 	});
-
-		// 	// // INITIALISING FULLPAGE.JS
-
-		// 	// 	function init(){
-		// 	// 	   	$('#fullpage').fullpage({
-		// 	// 			verticalCentered:false,
-		// 	// 			scrollOverflow: true,
-
-		// 	// 		});
-		// 	// 	};
-
-		// 	// GETTING THE CONTENT INTO THE GALLERY
-
-		// 	function appendNewContent(page) {
-		// 		$.ajax({
-		// 			url: page, // here I pass the param to the ajax
-		// 			cache: false,
-		// 			type: 'GET',
-		// 			success: function (html) {
-		// 				$('#page').empty();
-		// 				// $.fn.fullpage.destroy('all');
-		// 				// here handle all the appending the html
-		// 				$('#page').append($(html));
-		// 				// initialise fp.js
-		// 				// init();
-		// 			}
-		// 		});
-		// 	}
-
-		// });
-
 		let menu;
 		let menuButton;
 		let menuItems;
@@ -153,6 +95,8 @@
 				s.style.backgroundColor = backColor;
 				s.querySelector("#title").style.color = backColor;
 				s.querySelector("#title").style.backgroundColor = titleColor;
+				s.querySelector("footer").style.backgroundColor = titleColor;
+				s.querySelector("footer").style.color = backColor;
 			}
 		}
 
@@ -178,8 +122,11 @@
 		<button id="menu-button" onclick="`${this.classList.contains('active') ? hideMenu() : showMenu()}`"> Projects
 		</button>
 		<div class="socials">
-			<a target="_blank" href="mailto:aurelrichard00@gmail.com?Subject=Hi,%20I%20would%20like%20to%20offer%20you%20a%20job!"><img width="100%" src="icons/Mail.svg"></a>
-			<a target="_blank" href="https://www.linkedin.com/in/aurel-richard-3200292a6/"><img width="100%" src="icons/Linkedin.svg"></a>
+			<a target="_blank"
+				href="mailto:aurelrichard00@gmail.com?Subject=Hi,%20I%20would%20like%20to%20offer%20you%20a%20job!"><img
+					width="100%" src="icons/Mail.svg"></a>
+			<a target="_blank" href="https://www.linkedin.com/in/aurel-richard-3200292a6/"><img width="100%"
+					src="icons/Linkedin.svg"></a>
 		</div>
 	</nav>
 
