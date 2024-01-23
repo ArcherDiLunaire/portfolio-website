@@ -259,6 +259,7 @@ nav {
 	padding: 40px;
 	display: block;
 	width: calc(100% - 80px);
+	min-height: 500px;
 }
 
 
@@ -271,10 +272,10 @@ h1 {
 }
 
 h3 {
-	font-size: 14pt;
+	font-size: 12pt;
 	font-weight: 300;
 	line-height: 24pt;
-	opacity: 0.7;
+	opacity: 0.8;
 }
 
 h2 {
@@ -294,6 +295,7 @@ p {
 	font-size: 10pt;
 	font-weight: 500;
 	margin-top: 20px;
+	opacity: 0.8;
 }
 
 a {
@@ -419,6 +421,7 @@ h10 {
 	#page-content iframe {
 		padding: 0;
 		width: 100%;
+		min-height: 60vw;
 	}
 
 }
