@@ -262,6 +262,10 @@ nav {
 	min-height: 500px;
 }
 
+#page-content.no-scroll{
+	position: fixed;
+}
+
 
 h1 {
 	font-weight: 400;
