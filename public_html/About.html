@@ -11,20 +11,20 @@
 	// 	    }
 	// );
 
-		console.log("hello");
-		var fonts = document.querySelectorAll('font');
+	console.log("hello");
+	var fonts = document.querySelectorAll('font');
 
-		fonts.forEach(function (font) {
-			font.addEventListener('mouseenter', function () {
-				var initialText = this.textContent;
-				this.dataset.initialtext = initialText;
-				this.textContent = this.dataset.toggletext;
-			});
-
-			font.addEventListener('mouseleave', function () {
-				this.textContent = this.dataset.initialtext;
-			});
+	fonts.forEach(function (font) {
+		font.addEventListener('mouseenter', function () {
+			var initialText = this.textContent;
+			this.dataset.initialtext = initialText;
+			this.textContent = this.dataset.toggletext;
 		});
+
+		font.addEventListener('mouseleave', function () {
+			this.textContent = this.dataset.initialtext;
+		});
+	});
 </script>
 
 <!-- OVERALL TEXT COLOR -->
@@ -42,21 +42,24 @@
 		<div class="text">
 
 			<h2 style="color:dodgerblue"> Where I've Been</h2>
-			<h6> I was born in <span data-toggletext="&nbsp;Paris&nbsp;" data-initialtext="France"></span>, grew up in <span
-					data-toggletext="Melbourne" data-initialtext="Australia"></span>, studied in <span
+			<h6> I was born in <span data-toggletext="&nbsp;Paris&nbsp;" data-initialtext="France"></span>, grew up in
+				<span data-toggletext="Melbourne" data-initialtext="Australia"></span>, studied in <span
 					data-toggletext="London" data-initialtext="England"></span> where I graduated <span
-					data-toggletext="with a BA in Graphic Design" data-initialtext="from Central Saint Martins"></span>. I'm now currently
+					data-toggletext="with a BA in Graphic Design" data-initialtext="from Central Saint Martins"></span>.
+				I'm currently
 				living in <span data-toggletext="a lovely atico" data-initialtext="Barcelona"> </span>.</h6>
 
 			<br>
 			<br>
 
 			<h2 style="color:royalblue"> Where I'm Going</h2>
-			<h6> I'm currently teaching <span data-toggletext="creative technologies" data-initialtext="at IED Barcelona"></span>, while continuing to
-				<span data-toggletext="&nbsp;learn new skills&nbsp;" data-initialtext="take on challenging projects"></span>, be
-				part of <span data-toggletext="&nbsp;innovative projects&nbsp;" data-initialtext="fun and motivated teams"></span> anywhere
-				around the globe and make <span data-toggletext="&nbsp;fun playful stuff &nbsp;" data-initialtext="cool techy
-				things"></span>.
+			<h6> I'm currently <span data-toggletext="mentoring" data-initialtext="teaching"></span> design students
+				<span data-toggletext="on interactive technologies" data-initialtext="at IED Barcelona"></span>. Having
+				recently learned <span data-initialtext="about electronics" data-toggletext="how to solder"></span> at
+				FabLab Barcelona, i'd love to work <span data-initialtext="with fun and motivated teams"
+					data-toggletext="on innovative projects"></span>, anywhere
+				around the globe, <span data-initialtext="making cool playful stuff"
+					data-toggletext="learning new techy things"></span>.
 			</h6>
 		</div>
 	</div>

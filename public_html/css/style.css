@@ -38,8 +38,10 @@ nav {
 
 .socials {
 	height: 25px;
-	display: flex;
-	gap: 5px;
+}
+
+.socials a{
+	text-decoration: none;
 }
 
 #menu {
@@ -97,7 +99,7 @@ nav {
 .grid-item {
 	display: flex;
 	align-items: center;
-    justify-content: center;
+	justify-content: center;
 	flex-grow: 1;
 	width: calc(100%/3);
 	height: calc(100%/3.3);
@@ -208,8 +210,10 @@ nav {
 
 /******* SECTIONS ********/
 
-#page-content .section{
+#page-content .section {
 	position: relative;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 #page-content .section img {
@@ -254,7 +258,8 @@ nav {
 	padding: 100px 0;
 }
 
-#page-content iframe {
+#page-content iframe,
+#page-content video {
 	margin: 0 auto;
 	padding: 40px;
 	display: block;
@@ -262,7 +267,7 @@ nav {
 	min-height: 500px;
 }
 
-#page-content.no-scroll{
+#page-content.no-scroll {
 	position: fixed;
 }
 
@@ -289,9 +294,9 @@ h2 {
 	margin: 0;
 }
 
-h2#title{
-    padding: 2px 8px;
-    border-radius: 20px;
+h2#title {
+	padding: 2px 8px;
+	border-radius: 20px;
 	font-weight: 500;
 }
 
@@ -330,7 +335,7 @@ a {
 
 h6 {
 	font-weight: 400;
-	font-size: 20pt;
+	font-size: 18pt;
 	line-height: 32pt;
 	margin: 0;
 	padding-top: 10px;
@@ -340,9 +345,9 @@ h6 {
 h6 span::after {
 	content: attr(data-initialText);
 	color: rgb(87, 87, 87);
-    background-color: rgb(215 215 215);
-    padding: 2px 6px;
-    border-radius: 4px;
+	background-color: rgb(215 215 215);
+	padding: 2px 6px;
+	border-radius: 4px;
 }
 
 h6 span:hover::after {
@@ -359,7 +364,7 @@ footer {
 	width: 100%;
 }
 
-footer .info{
+footer .info {
 	padding: 10px 0;
 	margin: 0 80px;
 	text-align: right;
@@ -379,25 +384,25 @@ h10 {
 @media screen and (max-width: 800px) {
 
 	#about #contact {
-		margin-right: 40px;
+		margin-right: 20px;
 	}
 
-	nav{
-		width: calc(100% - 80px);
-		margin: 20px 40px;
+	nav {
+		width: calc(100% - 40px);
+		margin: 20px;
 	}
 
 	#about .text {
-		margin-right: 40px;
+		margin-right: 20px;
 		width: 70vw !important;
 	}
 
 	#page-content .section .text {
-		margin-right: 40px;
+		margin-right: 20px;
 	}
 
-	footer .info{
-		margin: 0 40px;
+	footer .info {
+		margin: 0 20px;
 	}
 
 	h1 {
@@ -406,7 +411,7 @@ h10 {
 		font-weight: 500;
 	}
 
-	h2{
+	h2 {
 		font-size: 10pt;
 		font-weight: 300;
 	}
@@ -422,7 +427,8 @@ h10 {
 		font-weight: 500;
 	}
 
-	#page-content iframe {
+	#page-content iframe,
+	#page-content video {
 		padding: 0;
 		width: 100%;
 		min-height: 60vw;
