@@ -6,6 +6,8 @@ let titleColor;
 let style;
 let pageContent;
 
+let timeOut;
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -86,7 +88,7 @@ function showMenu() {
     menuButton.innerHTML = "Close";
     menu.classList.remove("hidden");
     menuButton.classList.add("active");
-    setTimeout(() => {
+    timeOut = setTimeout(() => {
         pageContent.classList.add("no-scroll");
     }, 1000);
 }
@@ -96,5 +98,6 @@ function hideMenu() {
     menuButton.innerHTML = "Projects";
     menu.classList.add("hidden");
     menuButton.classList.remove("active");
+    clearTimeout(timeOut);
     pageContent.classList.remove("no-scroll");
 }

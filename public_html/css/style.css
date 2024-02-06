@@ -40,8 +40,29 @@ nav {
 	height: 25px;
 }
 
+.socials a img{
+	border: solid 1px;
+    border-radius: 8px;
+    padding: 3px;
+    height: 17px;
+}
+
+.socials a svg{
+	border: solid 1px;
+    border-radius: 8px;
+    padding: 3px;
+    height: 17px;
+	fill: #fff;
+}
+
+.socials a:hover svg{
+	fill: #000;
+	background-color: #fff;
+}
+
 .socials a{
 	text-decoration: none;
+	margin-left: 2px;
 }
 
 #menu {
