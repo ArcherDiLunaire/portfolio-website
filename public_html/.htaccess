@@ -1,9 +1,0 @@
-AddHandler application/x-httpd-alt-php56___lsphp .php
-# BEGIN ANSIBLE MANAGED BLOCK
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{HTTP_HOST} addon-archerdilunaire-com.2f373346-3395-4daf-8bd5-348262e781e0.dummy$
-RewriteRule ^(.*)$ "http://2f373346-3395-4daf-8bd5-348262e781e0.dummy/404" [R=301,L]
-</IfModule>
-# END ANSIBLE MANAGED BLOCK
-DirectoryIndex index.html index.php index.htm index.shtm index.shtml default.html

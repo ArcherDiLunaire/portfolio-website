@@ -1,0 +1,209 @@
+{
+    "projects": [
+        {
+            "title": "Torbellino",
+            "logo": "/images/Torbellino/MIRA_Logo.png",
+            "link": "https://www.ied.es/noticias/el-ied-barcelona-hace-tangible-lo-invisible-en-mira-digital-arts-festival-2025",
+            "heroImage": "/images/Torbellino/mira_vid-1.mp4",
+            "thumbnail": "/images/Torbellino/hand_mira_25.png",
+            "backgroundColor": "#000",
+            "highlightColor": "#3d31ff",
+            "fontColor": "#fff",
+            "footerFontColor": "#fff",
+            "subtitle": "A sensorial light installation that reveals invisible energies.",
+            "tags": [
+                "Interactive Experience",
+                "Education",
+                "Light Installation"
+            ],
+            "description": "An interactive installation and visual spectacle that invites participants into a sensory space where the invisible becomes perceptible. Through fabrics, airflow, and projected lights, the work makes unseen energies reachable.",
+            "videoURL": "https://www.youtube.com/embed/lDG9luyFhnc?si=gtNreaVd9HjiR1eU",
+            "images": [
+                "/images/Torbellino/mira_img.jpg",
+                "/images/Torbellino/crowd_mira_25.jpg"
+            ],
+            "footer": "Created in collaboration with the students of the Master in Interactive Design & Extended Realities.<br>Torbellino is a project of <i>IED</i><br>Exhibited at the <i>MIRA FESTIVAL 2025</i>."
+        },
+        {
+            "title": "Joystick",
+            "logo": "/images/Joystick/fablabbcn-logo.svg",
+            "thumbnail": "/images/Joystick/joystick_cover_small.jpg",
+            "heroImage": "/images/Joystick/presentation_1.jpg",
+            "backgroundColor": "#131216",
+            "highlightColor": "#da1d2b",
+            "fontColor": "#fff",
+            "subtitle": "A Joystick to remote control (almost) anything.",
+            "link": "https://fablabbcn.org/blog/theclass/controlling-real-life-objects-with-a-joystick",
+            "tags": [
+                "Physical Computing",
+                "IoT",
+                "Prototyping",
+                "3D printing"
+            ],
+            "description": "Joystick is a <b>modular system</b> that allows a user to <b>remotely control things</b>.Plug anything in and you can control it with the joystick.<br> We're used to this type of controllers as a way to <b>interact with arcade games</b> and have <b>fun experiences</b>. Here, this projects takes advantage of those expectations by transforming your interaction with everyday objects into a <b>playful experience</b>, rendering whatever objects are plugged in part of your game.",
+            "videoURL": "https://www.youtube.com/embed/XmIEs4A5ZGg?si=9IOQohQyCRrawXzv",
+            "images": [
+                "/images/Joystick/joystick_00.jpg",
+                "/images/Joystick/joystick_02.jpg"
+            ],
+            "footer": "Project developed with the support of the team at FABLAB Barcelona."
+        },
+        {
+            "title": "SuperBarrio",
+            "logo": "/images/Superbarrio/IAAC_logo.png",
+            "thumbnail": "/images/Superbarrio/superbarrio_small.png",
+            "heroImage": "/images/Superbarrio/SuperbarrioCover.png",
+            "backgroundColor": "#fafafa",
+            "highlightColor": "#f76464",
+            "fontColor": "#000",
+            "subtitle": "A videogame to engage citizens in designing their public spaces.",
+            "link": "https://superbarrio.iaac.net/",
+            "tags": [
+                "Graphic Design",
+                "Game Development",
+                "UX/UI",
+                "Education"
+            ],
+            "description": "Superbarrio is a game designed to boost participatory design. It makes use gamification strategies to <b>engage the citizens</b> in the design of their own <b>public space</b>. <br><br> As an open-source tool, Superbarrio widens the potential audience of <b>participatory design processes</b>, overcoming the limits of conventional methodologies.",
+            "images": [
+                "/images/Superbarrio/superbarrio_vid-1.mp4",
+                "/images/Superbarrio/superbarrio_02.jpg"
+            ],
+            "footer": "Created in collaboration with the students of the Master in Cities and Technology 2017.<br> SuperBarrio is a project of <i>IaaC, Institute for Advanced Architecture of Catalonia</i>."
+        },
+        {
+            "title": "Metronomy Pinball Machine",
+            "logo": "/images/Metronomy/Sonos_White_Logo.png",
+            "heroImage": "/images/Metronomy/Metronomy_0.mp4",
+            "thumbnail": "/images/Metronomy/metronomy_small.png",
+            "backgroundColor": "black",
+            "highlightColor": "gold",
+            "fontColor": "#fff",
+            "footerFontColor": "#000",
+            "subtitle": "The retro pinball machine that recreates a Metronomy tune.",
+            "tags": [
+                "Game Design",
+                "Physical Computing",
+                "Interactive Installation"
+            ],
+            "description": "Inspired by the <b>retro feel</b> of the Metronomy album: <b>Summer 08</b>, we designed a <b>custom pinball machine</b> that has each of its bumpers, paddles and walls playing stems from their hit song: <i>Old Skool</i>. <br>As the game is played, each player creates <b>their own version of the Metronomy tune</b>",
+            "images": [
+                "/images/Metronomy/metronomy_04.jpg",
+                "/images/Metronomy/pinball_Metronomy_banner_01.png"
+            ],
+            "footer": "Created in Collaboration with Persiis Hajiyanni<br> Sound Design by Stefan Iyapah<br> Exhibited at the '<i>Metronomy - Summer 08 </i>' album launch - Sonos Studios, London."
+        },
+        {
+            "title": "Je suis qui je suis",
+            "logo": "/images/Je_suis_qui_je_suis/logo-palais-de-tokyo.png",
+            "heroImage": "/images/Je_suis_qui_je_suis/jesuis_vid2.mp4",
+            "thumbnail": "/images/Je_suis_qui_je_suis/jesuis2_small.png",
+            "backgroundColor": "#0d0b0b",
+            "highlightColor": "#807d86",
+            "fontColor": "#fff",
+            "footerFontColor": "#fff",
+            "subtitle": "An interactive installation that lets you play with your own shadow.",
+            "tags": [
+                "Interactive Installation",
+                "Processing",
+                "Kinnect"
+            ],
+            "description": "An interactive projection that engages the visitors by surprising them with a <b>second shadow</b> projected on the wall behind them <b>with a slight delay</b>. <br> This allows the audience to participate in an <b>unusual and playful dialogue</b> with their own shadow.",
+            "videoURL": "https://player.vimeo.com/video/205774595?color=000000&title=0&byline=0&portrait=0",
+            "images": [
+                "/images/Je_suis_qui_je_suis/je_suis_01.jpg",
+                "/images/Je_suis_qui_je_suis/je_suis_03.jpg"
+            ],
+            "footer": "Created in Collaboration with Persiis Hajiyanni and Stefan Iyapah<br>Exhibited at the <i>Palais De Tokyo</i> - Paris for the 2016 DO DISTURB! Festival"
+        },
+        {
+            "title": "Meeting Intruders",
+            "logo": "/images/Meeting_Intruders/b-reel_logo1.png",
+            "link": "https://thefwa.com/cases/meeting-intruders",
+            "heroImage": "images/Meeting_Intruders/Meeting_intruders_video.mp4",
+            "thumbnail": "/images/Meeting_Intruders/meet_small_2.jpg",
+            "backgroundColor": "#000000",
+            "highlightColor": "#d20f58",
+            "fontColor": "#fff",
+            "subtitle": "A chrome extension that makes never-ending meetings a little more fun.",
+            "tags": [
+                "Game Design",
+                "Game Development",
+                "Creative Coding"
+            ],
+            "description": "Meetings: Useful? Absolutely. Boring? Wellll, meetings are rarely the highlight of anyone’s day. And that was before 2020 kicked in, turning meetings into a nonstop Zoom-athon of home-based enterprise.<br><br>Meeting intruders is a fun, private, distracting escape that lets you grin your way through meetings and leaves your colleagues none the wiser.<br>As soon as you start, you’ll know what to do.<br><p> Try it out on the <a href='https://chrome.google.com/webstore/detail/b-reel-meeting-intruders/ekpjjckkocgchggggogefakgipalfnee?hl=en' target='_blank'>Google Play Store</a>",
+            "images": [
+                "images/Meeting_Intruders/meet_1.jpg"
+            ],
+            "footer": "Winner of a FWA award, <br> Created in collaboration with the team at B-Reel Barcelona"
+        },
+        {
+            "title": "DRI.VR",
+            "logo": "/images/Drivr/UAL_logo.png",
+            "heroImage": "/images/Drivr/drivr.png",
+            "thumbnail": "/images/Drivr/drivr_small.png",
+            "backgroundColor": "#f6f6f6",
+            "highlightColor": "deepskyblue",
+            "fontColor": "#000",
+            "subtitle": "A VR experience that lets you be at the wheel of a toy remote control car.",
+            "tags": [
+                "3D Design",
+                "VR",
+                "Physical computing"
+            ],
+            "description": "<b>Virtual Reality</b> offers the possibility to access the macroscopic and the <b>microscopic</b> and to see and feel things in ways never possible before.<br><br> DRI.VR takes advantage of this in a <b>fun way</b>, offering a playful experience that will change your perspective and <b>really make you feel small.</b>",
+            "images": [
+                "/images/Drivr/drivr_vid_short.mp4",
+                "/images/Drivr/driver_03-2.jpg",
+                "/images/Drivr/drivr_01.jpg"
+            ],
+            "footer": "Exhibited at the <i>Central Saint Martins Degree Show</i> 2015, London."
+        },
+        {
+            "title": "Inside",
+            "logo": "/images/Inside/gallery_logo.png",
+            "heroImage": "/images/Inside/vr_inside_guitar.jpg",
+            "thumbnail": "/images/Inside/cover2_small.jpg",
+            "backgroundColor": "#000",
+            "highlightColor": "#e4ab36",
+            "fontColor": "#fff",
+            "footerFontColor": "#000",
+            "subtitle": "An immersive musical journey from the insides of a guitar.",
+            "tags": [
+                "VR",
+                "3D Design",
+                "Immersive Experience",
+                "Creative Coding"
+            ],
+            "videoURL": "/images/Inside/guitar_playing.mp4",
+            "description": "This immersive work demonstrated the <b>power of VR</b> by letting us <b>experience music</b> in a completely different way than we could before: <br><br> The beauty of the <b>guitar's architecture</b> is highlighted as each note warmly reverberates off the walls, while the <b>strings vibrate in realtime</b> to the sound of the instrument being played, offering a <b>holistic experience</b> to the user.",
+            "images": [
+                "/images/Inside/guitar_gif.mp4"
+            ],
+            "footer": "Created in collaboration with Sofia Aronov. Music by Stefan Iyapah.<br>Exhibited at the <i>Lethaby Gallery</i> 20, London."
+        },
+        {
+            "title": "Alier",
+            "logo": "/images/Alier/alier_logo.png",
+            "heroImage": "/images/Alier/Alier_start_screen.mp4",
+            "thumbnail": "/images/Alier/Alier_thumbnail.jpg",
+            "backgroundColor": "#004dd2",
+            "highlightColor": "#ff3a61",
+            "fontColor": "#fff",
+            "footerFontColor": "#fff",
+            "subtitle": "An interactive game to promote Alier's paper recycling services",
+            "tags": [
+                "Interactive Installation",
+                "Leap Motion",
+                "3D Design",
+                "Game Design"
+            ],
+            "description": "This <b>gamified interaction</b> enabled visitors to understand the services & products of the company. The <b>Leap motion</b>, a hand tracking device, helped engage the users in an <b>intuitive and accessible</b> way and made the game even more <b>fun</b>.",
+            "images": [
+                "/images/Alier/showcase_event01.mp4",
+                "/images/Alier/Alier_expo_3.jpg"
+            ],
+            "footer": "Made in collaboration with Manuela Pereira.<br>Exhibited at the <i>Global Gypsum Conference</i> 2022, Lisbon."
+        }
+    ]
+}
