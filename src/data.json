@@ -10,7 +10,7 @@
             "highlightColor": "#3d31ff",
             "fontColor": "#fff",
             "footerFontColor": "#fff",
-            "subtitle": "A sensorial light installation that reveals invisible energies.",
+            "subtitle": "A sensorial light installation that reveals our invisible energies.",
             "tags": [
                 "Interactive Experience",
                 "Education",
@@ -108,8 +108,8 @@
                 "Processing",
                 "Kinnect"
             ],
-            "description": "An interactive projection that engages the visitors by surprising them with a <b>second shadow</b> projected on the wall behind them <b>with a slight delay</b>. <br> This allows the audience to participate in an <b>unusual and playful dialogue</b> with their own shadow.",
-            "videoURL": "https://player.vimeo.com/video/205774595?color=000000&title=0&byline=0&portrait=0",
+            "description": "An interactive projection that engages the visitors by surprising them with a <b>second shadow</b> projected on the wall behind them <b>with a slight delay</b>. <br>This allows the audience to participate in an <b>unusual and playful dialogue</b> with their own shadow.",
+            "videoURL": "https://player.vimeo.com/video/205774595?transparent=0&color=000000&title=0&byline=0&portrait=0",
             "images": [
                 "/images/Je_suis_qui_je_suis/je_suis_01.jpg",
                 "/images/Je_suis_qui_je_suis/je_suis_03.jpg"
@@ -145,6 +145,7 @@
             "backgroundColor": "#f6f6f6",
             "highlightColor": "deepskyblue",
             "fontColor": "#000",
+            "footerFontColor": "#000",
             "subtitle": "A VR experience that lets you be at the wheel of a toy remote control car.",
             "tags": [
                 "3D Design",
@@ -171,9 +172,9 @@
             "subtitle": "An immersive musical journey inside a guitar.",
             "tags": [
                 "VR",
-                "3D Design",
                 "Immersive Experience",
-                "Creative Coding"
+                "Creative Coding",
+                "3D Design"
             ],
             "videoURL": "/images/Inside/guitar_playing.mp4",
             "description": "This immersive project demonstrates the <b>power of VR</b> by letting us <b>experience music</b> in a completely different way than we could before: <br><br> The beauty of the <b>guitar's architecture</b> is highlighted as each note warmly reverberates off the walls, while the <b>strings vibrate in realtime</b> to the sound of the instrument being played, offering a <b>holistic experience</b> to the user.",
