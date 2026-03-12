@@ -37,9 +37,8 @@ function initMenu() {
     if (project.tags) {
       project.tags.forEach(tag => {
         const el = document.createElement('h4');
-        el.style.color = project.highlightColor;
-        el.style.backgroundColor = project.backgroundColor;
-        el.style.borderColor = project.highlightColor;
+        el.style.color = project.footerFontColor;
+        el.style.backgroundColor = project.highlightColor;
         el.textContent = tag;
         tagsWrapper.appendChild(el);
       });

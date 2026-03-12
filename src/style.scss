@@ -416,6 +416,7 @@ h3 {
   font-weight: 400; //300
   line-height: 27pt;
   opacity: 0.8;
+  margin: 0;
 
   b {
     font-weight: bold;
@@ -474,8 +475,8 @@ h6 {
 
 h6 span::after {
   content: attr(data-initialText);
-  color: rgb(167 167 167);
-  background-color: rgb(215 215 215 / 10%);
+  color: rgba(220, 220, 220, 1);
+  background-color: rgb(25 25 25);
   padding: 4px 12px;
   border-radius: 20px;
   width: max-content;
@@ -554,6 +555,7 @@ h10 {
     margin: var(--main-margin);
     width: calc(100% - var(--main-margin) * 2);
     flex-wrap: wrap;
+    justify-content: center;
 
     h4 {
       transform: translate(0);
@@ -571,6 +573,10 @@ h10 {
 
   #page-content .section .text {
     width: 70vw;
+  }
+
+  .section-text {
+    margin-bottom: var(--main-margin);
   }
 
   .titles {

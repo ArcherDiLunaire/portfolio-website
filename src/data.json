@@ -38,7 +38,7 @@
                 "Physical Computing",
                 "IoT",
                 "Prototyping",
-                "3D printing"
+                "3D Printing"
             ],
             "description": "Joystick is a <b>modular system</b> that allows a user to <b>remotely control things</b>.Plug anything in and you can control it with the joystick.<br> We're used to this type of controllers as a way to <b>interact with arcade games</b> and have <b>fun experiences</b>. Here, this projects takes advantage of those expectations by transforming your interaction with everyday objects into a <b>playful experience</b>, rendering whatever objects are plugged in part of your game.",
             "videoURL": "https://www.youtube.com/embed/XmIEs4A5ZGg?si=9IOQohQyCRrawXzv",
@@ -150,7 +150,7 @@
             "tags": [
                 "3D Design",
                 "VR",
-                "Physical computing"
+                "Physical Computing"
             ],
             "description": "<b>Virtual Reality</b> offers the possibility to access the macroscopic and the <b>microscopic</b> and to see and feel things in ways never possible before.<br><br> DRI.VR takes advantage of this in a <b>fun way</b>, offering a playful experience that will change your perspective and <b>really make you feel small.</b>",
             "images": [
