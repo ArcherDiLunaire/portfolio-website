@@ -56,6 +56,7 @@
             "backgroundColor": "#fafafa",
             "highlightColor": "#f76464",
             "fontColor": "#000",
+            "footerFontColor": "#000",
             "subtitle": "A videogame to engage citizens in designing their public spaces.",
             "link": "https://superbarrio.iaac.net/",
             "tags": [
@@ -206,5 +207,12 @@
             ],
             "footer": "Made in collaboration with Manuela Pereira.<br>Exhibited at the <i>Global Gypsum Conference</i> 2022, Lisbon."
         }
+    ],
+    "grid": [
+        "/experiments/cambria_dark.webp",
+        "/experiments/cambria_logo.webp",
+        "/experiments/ar-watch.webp",
+        "/experiments/strawberries.webp",
+        "/experiments/surf.webp"
     ]
 }

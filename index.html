@@ -9,13 +9,26 @@
   <meta property="og:url" content="http://archerdilunaire.com/">
   <meta property="og:image" content="images/Drivr/drivr.png" />
   <meta property="og:type" content="website" />
+  <style>
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #212121;
+      background-image: url("/icons/noise.png");
+      background-attachment: fixed;
+      background-size: 10%;
+    }
+  </style>
 </head>
 
 <body>
-  <nav id="header">
-    <button id="menu-button" class="border-btn"> Projects</button>
+  <nav id="header" class="hidden">
+    <button id="menu-button" class="border-btn">Projects</button>
+    <button id="about-button" class="border-btn"> <span>Experiments</span></button>
     <div class="socials">
-      <button id="about-button" class="border-btn"> <span>About</span></button>
       <a target="_blank"
         href="mailto:aurelrichard00@gmail.com?Subject=Hi,%20I%20would%20like%20to%20offer%20you%20a%20job!">
         <svg height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -45,11 +58,9 @@
       </a>
     </div>
   </nav>
-
   <section id="menu" class="hidden"></section>
   <section id="about">
     <div class="text">
-
       <h2> A little bit about me:</h2>
       <h6> I was born in <span data-toggletext="&nbsp;Paris&nbsp;" data-initialtext="France"></span>, grew up in
         <span data-toggletext="Melbourne" data-initialtext="Australia"></span>, studied in <span
@@ -58,22 +69,28 @@
         </br>
         I'm currently based in Barcelona where I <span data-toggletext="mentor design students"
           data-initialtext="lecture on creative tech"></span> at the Institut of European Design, <span
-          data-initialtext="teach rapid-prototyping"
-          data-toggletext="research physical computing"></span> at FabLab Barcelona and <span
-          data-initialtext="design interactive installations" data-toggletext="develop new playful tech"></span>
+          data-initialtext="teach rapid-prototyping" data-toggletext="research physical computing"></span> at FabLab
+        Barcelona and <span data-initialtext="design interactive installations"
+          data-toggletext="develop new playful tech"></span>
         for <span data-initialtext="top-end clients" data-toggletext="world-class festivals"></span>. I'm always
         looking to work <span data-initialtext="on innovative projects"
           data-toggletext="with fun and motivated teams"></span> anywhere
         around the globe.
       </h6>
-    </div>
-    <div>
-      <p>*The works in this portfolio are a selection of projects that I have executed from ideation to final delivery.
+      <p>* All the works on this website are a selection of projects that I have made from ideation to final delivery.
         Often in collaboration with, or with the support of, other very talented people.</p>
+    </div>
+    <div class="grid-wrapper">
+      <div id="masonry-grid">
+        <!-- JavaScript will inject image elements here on load -->
+      </div>
     </div>
   </section>
   <section id="projects" class="hidden"></section>
+  <div id="background"></div>
+
   <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/masonry-grid.js"></script>
 </body>
 
 </html>
