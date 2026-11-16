@@ -212,7 +212,12 @@
         "/experiments/cambria_dark.webp",
         "/experiments/cambria_logo.webp",
         "/experiments/ar-watch.webp",
+        "/experiments/surf.webp",
+        "/experiments/surfboard.webp",
         "/experiments/strawberries.webp",
-        "/experiments/surf.webp"
+        "/experiments/lampita.webp",
+        "/experiments/ramp_model.webp",
+        "/experiments/ramp_live.webp",
+        "/experiments/test.png"
     ]
 }
