@@ -6,20 +6,25 @@ const menuButton = document.querySelector("#menu-button");
 const aboutButton = document.querySelector("#about-button");
 const projects = document.querySelector("#projects");
 const about = document.querySelector("#about");
+const background = document.querySelector("#background");
+const nav = document.querySelector("#header");
 
 initMenu();
-
 toggleMenu();
+nav.classList.remove("hidden");
+
 
 aboutButton.addEventListener("click", () => {
   menu.classList.add("hidden");
-  menuButton.innerHTML = menu.classList.contains("hidden") ? "Projects" : "Close";
+  background.classList.add("hidden");
   projects.classList.add("hidden");
   about.classList.remove("hidden");
 });
 
 menuButton.addEventListener("click", () => {
-  toggleMenu();
+  if(menu.classList.contains("hidden")) {
+    toggleMenu();
+  }
 });
 
 function initMenu() {
@@ -57,13 +62,21 @@ function initMenu() {
 }
 
 function toggleMenu() {
-  menu.classList.toggle("hidden");
-  menuButton.innerHTML = menu.classList.contains("hidden") ? "Projects" : "Close";
+  if(menu.classList.contains("hidden")) {
+    //show menu grid
+    background.classList.remove("hidden");
+    menu.classList.remove("hidden");
+    // menuButton.innerHTML = "Close"
+  } else {
+    //hide menu grid
+    background.classList.add("hidden");
+    menu.classList.add("hidden");
+    menuButton.innerHTML = "Projects";
+  }
 }
 
 function insertProjects(project) {
   toggleMenu();
-  console.log("Insert project:", project);
   document.documentElement.style.setProperty('--display-height', `${window.innerHeight}px`);
   projects.innerHTML = '';
   projects.style.backgroundColor = project.backgroundColor;
