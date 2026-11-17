@@ -95,11 +95,15 @@ function loadItems() {
             item.style.minHeight = 'auto';
         };
 
-
         // Assemble the DOM structure
         item.appendChild(img);
         grid.appendChild(item);
     }
+
+    const item = document.createElement('div');
+    item.className = 'masonry-item span-col-4 span-row-1';
+    grid.appendChild(item);
+
 }
 
 // Initialize grid automatically when page loads
