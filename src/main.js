@@ -10,11 +10,13 @@ const background = document.querySelector("#background");
 const nav = document.querySelector("#header");
 
 initMenu();
-toggleMenu();
+showMenu();
+about.classList.add("hidden");
 nav.classList.remove("hidden");
 
 
 aboutButton.addEventListener("click", () => {
+  window.scrollTo(0, 0);
   menu.classList.add("hidden");
   background.classList.add("hidden");
   projects.classList.add("hidden");
@@ -23,7 +25,7 @@ aboutButton.addEventListener("click", () => {
 
 menuButton.addEventListener("click", () => {
   if(menu.classList.contains("hidden")) {
-    toggleMenu();
+    showMenu();
   }
 });
 
@@ -61,22 +63,21 @@ function initMenu() {
   menu.appendChild(gridContainer);
 }
 
-function toggleMenu() {
-  if(menu.classList.contains("hidden")) {
-    //show menu grid
-    background.classList.remove("hidden");
-    menu.classList.remove("hidden");
-    // menuButton.innerHTML = "Close"
-  } else {
-    //hide menu grid
-    background.classList.add("hidden");
-    menu.classList.add("hidden");
-    menuButton.innerHTML = "Projects";
-  }
+function showMenu() {
+  background.classList.remove("hidden");
+  menu.classList.remove("hidden");
+  about.classList.add("hidden");
+  projects.classList.add("hidden");
+  menu.scrollTo(0, 0);
+}
+
+function hideMenu() {
+  background.classList.add("hidden");
+  menu.classList.add("hidden");
 }
 
 function insertProjects(project) {
-  toggleMenu();
+  hideMenu();
   document.documentElement.style.setProperty('--display-height', `${window.innerHeight}px`);
   projects.innerHTML = '';
   projects.style.backgroundColor = project.backgroundColor;
