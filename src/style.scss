@@ -113,6 +113,14 @@ nav {
     background-color: white;
     color: black;
     border-color: black;
+
+    &#menu-button {
+      background: linear-gradient(45deg, #f775d4, #f8e34f);
+    }
+
+    &#about-button {
+      background: linear-gradient(45deg, #5af3ff, #f8e34f);
+    }
   }
 
   &.active {
@@ -460,7 +468,9 @@ a {
 
 #about {
   .text {
-    margin: 150px var(--main-margin) 50px;
+    background: url("/experiments/cambria_dark.webp") no-repeat center center;
+    background-size: cover;
+    padding: 150px var(--main-margin) 50px;
     display: flex;
     flex-direction: column;
     max-width: 1275px;
@@ -578,7 +588,7 @@ h10 {
 
   #about {
     .text {
-      margin-top: 100px;
+      padding-top: 100px;
     }
   }
 

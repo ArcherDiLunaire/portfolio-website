@@ -16,11 +16,13 @@ nav.classList.remove("hidden");
 
 
 aboutButton.addEventListener("click", () => {
-  window.scrollTo(0, 0);
-  menu.classList.add("hidden");
-  background.classList.add("hidden");
-  projects.classList.add("hidden");
-  about.classList.remove("hidden");
+  if(about.classList.contains("hidden")) {
+    window.scrollTo(0, 0);
+    menu.classList.add("hidden");
+    background.classList.add("hidden");
+    projects.classList.add("hidden");
+    about.classList.remove("hidden");
+  }
 });
 
 menuButton.addEventListener("click", () => {
@@ -133,7 +135,7 @@ function insertProjects(project) {
       <p>${project.footer}</p>
      ${project.logo ? `<img class="logo" src="${project.logo}">` : ''} 
     </div>
-    <h10> Copyright &copy; - Archer Dilunaire - 2025 </h10>
+    <h10> Copyright &copy; - Archer Dilunaire - 2026 </h10>
   </footer>
 </div > `;
 
